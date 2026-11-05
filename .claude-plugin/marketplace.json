@@ -1,0 +1,17 @@
+{
+  "name": "build-learn-app",
+  "description": "One skill: describe what you want to learn, answer a few questions, get a verified, signed native Rust learning app for macOS.",
+  "owner": {
+    "name": "Nikolay Mohr",
+    "url": "https://github.com/Niko96-dotcom"
+  },
+  "plugins": [
+    {
+      "name": "build-learn-app",
+      "source": "./",
+      "description": "Build a complete, good-looking native Rust learning app for macOS for any skill: a few questions, then research, planning, a parallel agent build, verification in the real app, and a signed release.",
+      "version": "0.1.0",
+      "license": "MIT"
+    }
+  ]
+}

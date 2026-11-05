@@ -1,0 +1,22 @@
+{
+  "name": "build-learn-app",
+  "version": "0.1.0",
+  "description": "Build a complete, good-looking native Rust learning app for macOS for any skill: a few questions, then research, planning, a parallel agent build, verification in the real app, and a signed release.",
+  "author": {
+    "name": "Nikolay Mohr",
+    "url": "https://github.com/Niko96-dotcom"
+  },
+  "homepage": "https://github.com/Niko96-dotcom/build-learn-app",
+  "repository": "https://github.com/Niko96-dotcom/build-learn-app",
+  "license": "MIT",
+  "keywords": [
+    "learning",
+    "teaching",
+    "rust",
+    "egui",
+    "macos",
+    "app-builder",
+    "verification"
+  ],
+  "icon": ".claude-plugin/icon.png"
+}

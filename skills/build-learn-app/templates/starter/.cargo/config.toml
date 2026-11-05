@@ -1,0 +1,4 @@
+# One build folder for every cargo command, agent, the gate and verification.
+# Per-agent build folders filled the disk twice in earlier builds.
+[build]
+target-dir = "target/shared"

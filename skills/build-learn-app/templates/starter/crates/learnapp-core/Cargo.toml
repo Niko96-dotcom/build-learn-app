@@ -1,0 +1,11 @@
+[package]
+name = "learnapp-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Learnapp: learner model, scheduler, scoring and storage. No UI, no audio, no clock."
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true

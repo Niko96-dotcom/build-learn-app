@@ -1,0 +1,10 @@
+[package]
+name = "learnapp-drive"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Learnapp verification driver: keys posted to the app pid, AX actions, window screenshots, timed play from the trace"
+
+[dependencies]
+serde_json.workspace = true

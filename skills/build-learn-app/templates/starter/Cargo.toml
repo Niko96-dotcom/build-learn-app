@@ -1,0 +1,27 @@
+[workspace]
+resolver = "3"
+members = ["crates/learnapp-core", "crates/learnapp-app", "tools/learnapp-drive"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "UNLICENSED"
+publish = false
+
+[workspace.dependencies]
+learnapp-core = { path = "crates/learnapp-core" }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["float_roundtrip"] }
+
+[profile.release]
+# Line tables keep crash backtraces readable at a fraction of full debug info.
+debug = "line-tables-only"
+codegen-units = 4
+lto = "thin"
+
+[profile.dev]
+# Small build folders: parallel agents share one target dir, and disks fill up.
+debug = "line-tables-only"
+
+[profile.dev.package."*"]
+opt-level = 2

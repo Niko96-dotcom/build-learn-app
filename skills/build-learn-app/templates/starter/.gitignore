@@ -1,0 +1,8 @@
+/target
+/dist
+/evidence
+/research/raw
+.DS_Store
+__pycache__/
+*.pyc
+.venv/

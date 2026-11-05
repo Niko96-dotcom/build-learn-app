@@ -1,0 +1,32 @@
+[package]
+name = "learnapp-app"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Learnapp: the app (eframe/egui UI, macOS key monitor, trace mode)"
+
+[lib]
+name = "learnapp_app"
+path = "src/lib.rs"
+
+[[bin]]
+name = "learnapp"
+path = "src/main.rs"
+
+[dependencies]
+learnapp-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+eframe = { version = "0.37", default-features = false, features = ["wgpu", "accesskit", "clipboard", "default_fonts"] }
+egui = "0.37"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = "0.6"
+objc2-foundation = { version = "0.3", features = ["NSProcessInfo", "NSString", "NSFileManager", "NSURL", "NSError"] }
+objc2-app-kit = { version = "0.3", features = ["NSEvent", "NSResponder", "NSApplication", "block2", "NSWindow"] }
+block2 = "0.6"
+
+[dev-dependencies]
+egui_kittest = { version = "0.37", features = ["wgpu", "snapshot", "eframe"] }
+image = { version = "0.25", default-features = false, features = ["png"] }
